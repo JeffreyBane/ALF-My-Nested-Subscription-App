@@ -1,0 +1,15 @@
+<p>Employee Edit</p>
+<form [formGroup]="employeeForm">
+
+Name: <input type="text" value="{{ name }}"/><br>
+Status: <input type="text" value="{{ status }}"/><br>
+
+Department: <select formControlName="departmentsSelect">
+    <option *ngFor="let d of departments" [value]="d.deptId">
+        {{d.departmentName}}
+    </option>
+</select>
+<br>
+
+<button>Submit</button>
+</form>
